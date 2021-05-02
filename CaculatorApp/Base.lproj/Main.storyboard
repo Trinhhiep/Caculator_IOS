@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ej-FH-iUv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CaculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="doj-fG-oqE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34V-rH-xrM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="170.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-0q-faw">
+                                                <rect key="frame" x="20" y="41.5" width="374" height="129"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="100"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ZGz-0q-faw" secondAttribute="trailing" constant="20" id="3ev-mU-qUc"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZGz-0q-faw" secondAttribute="bottom" id="Eqf-mc-QQ7"/>
+                                            <constraint firstItem="ZGz-0q-faw" firstAttribute="leading" secondItem="34V-rH-xrM" secondAttribute="leading" constant="20" id="oFI-NQ-Ph2"/>
+                                            <constraint firstItem="ZGz-0q-faw" firstAttribute="centerX" secondItem="34V-rH-xrM" secondAttribute="centerX" id="yRH-Db-BmW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zR-KD-was">
+                                        <rect key="frame" x="0.0" y="170.5" width="414" height="603.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-iY-RsJ">
+                                                <rect key="frame" x="20" y="66" width="374" height="471"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GW-Zh-ceA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="94.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9m-BY-Q4D" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94.5"/>
+                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                                                <state key="normal" title="AC">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w2C-1e-xU3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bt-qu-WnZ" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <state key="normal" title="+/-">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8rv-Sc-mid"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG0-pN-jno" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94.5"/>
+                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <state key="normal" title="%">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mx8-ga-WBk"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxJ-Lf-sI7" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <state key="normal" title="/">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pay-QQ-dKJ"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="BxJ-Lf-sI7" firstAttribute="width" secondItem="g9m-BY-Q4D" secondAttribute="width" id="cDh-MP-7xm"/>
+                                                            <constraint firstItem="g9m-BY-Q4D" firstAttribute="height" secondItem="3GW-Zh-ceA" secondAttribute="height" id="foZ-hc-lor"/>
+                                                            <constraint firstItem="g9m-BY-Q4D" firstAttribute="width" secondItem="3GW-Zh-ceA" secondAttribute="width" multiplier="1/4" id="kqK-bX-bcs"/>
+                                                            <constraint firstItem="yG0-pN-jno" firstAttribute="width" secondItem="g9m-BY-Q4D" secondAttribute="width" id="kti-AZ-nRC"/>
+                                                            <constraint firstItem="3Bt-qu-WnZ" firstAttribute="width" secondItem="g9m-BY-Q4D" secondAttribute="width" id="mdB-DJ-TzJ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-BP-f4q">
+                                                        <rect key="frame" x="0.0" y="94.5" width="374" height="94"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-Yv-JiI" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="7">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29L-EB-xPn"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muN-VH-OdQ" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="8">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hto-6U-bNj"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAT-aN-nHv" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="9">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tA8-3v-hIy"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhH-QQ-odi" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <state key="normal" title="*">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oV4-gR-cJw"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="jyH-Yv-JiI" firstAttribute="width" secondItem="NI3-BP-f4q" secondAttribute="width" multiplier="1/4" id="BvZ-gl-DrV"/>
+                                                            <constraint firstItem="muN-VH-OdQ" firstAttribute="width" secondItem="jyH-Yv-JiI" secondAttribute="width" id="DQ8-XI-olu"/>
+                                                            <constraint firstItem="wAT-aN-nHv" firstAttribute="width" secondItem="jyH-Yv-JiI" secondAttribute="width" id="dp5-zv-ern"/>
+                                                            <constraint firstItem="uhH-QQ-odi" firstAttribute="width" secondItem="jyH-Yv-JiI" secondAttribute="width" id="vwP-3w-aCd"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PSF-GZ-kLw">
+                                                        <rect key="frame" x="0.0" y="188.5" width="374" height="94"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAn-uX-RAf" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="4">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JA9-Xp-4Tp"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shc-yz-yjZ" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="5">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSM-qG-EZf"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-uW-KBA" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="6">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CHX-q0-DRc"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8h-Lz-QZg" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <state key="normal" title="-">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2j-wl-zCd"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="HcX-uW-KBA" firstAttribute="width" secondItem="QAn-uX-RAf" secondAttribute="width" id="6SG-Jb-YYd"/>
+                                                            <constraint firstAttribute="bottom" secondItem="QAn-uX-RAf" secondAttribute="bottom" id="8Yh-sN-oiz"/>
+                                                            <constraint firstItem="QAn-uX-RAf" firstAttribute="width" secondItem="PSF-GZ-kLw" secondAttribute="width" multiplier="1/4" id="PoI-nw-KNx"/>
+                                                            <constraint firstAttribute="bottom" secondItem="M8h-Lz-QZg" secondAttribute="bottom" id="fOb-Zh-5a6"/>
+                                                            <constraint firstAttribute="bottom" secondItem="HcX-uW-KBA" secondAttribute="bottom" id="kOh-aJ-SpM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="shc-yz-yjZ" secondAttribute="bottom" id="mdp-RE-Gh4"/>
+                                                            <constraint firstItem="M8h-Lz-QZg" firstAttribute="width" secondItem="QAn-uX-RAf" secondAttribute="width" id="nNP-XY-ifZ"/>
+                                                            <constraint firstItem="shc-yz-yjZ" firstAttribute="width" secondItem="QAn-uX-RAf" secondAttribute="width" id="w8S-th-LTg"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P18-XY-tRC">
+                                                        <rect key="frame" x="0.0" y="282.5" width="374" height="94.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkW-Hj-1mr" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94.5"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="1">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3SW-OA-nZ2"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEB-F5-64C" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="2">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Agw-9E-Nc2"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFi-vV-Xmx" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94.5"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="3">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FzD-6A-XvY"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-wv-dAN" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <state key="normal" title="+">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BMm-Cd-kiA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="SFi-vV-Xmx" firstAttribute="width" secondItem="VkW-Hj-1mr" secondAttribute="width" id="O56-bU-qc6"/>
+                                                            <constraint firstItem="VkW-Hj-1mr" firstAttribute="width" secondItem="P18-XY-tRC" secondAttribute="width" multiplier="1/4" id="WRf-ss-SBP"/>
+                                                            <constraint firstItem="kFq-wv-dAN" firstAttribute="width" secondItem="VkW-Hj-1mr" secondAttribute="width" id="g8b-hq-4Uv"/>
+                                                            <constraint firstItem="qEB-F5-64C" firstAttribute="width" secondItem="VkW-Hj-1mr" secondAttribute="width" id="lhf-Qd-HZw"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-uC-hKp">
+                                                        <rect key="frame" x="0.0" y="377" width="374" height="94"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foF-oh-5fw" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="94"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="0">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhq-Ma-l9S"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mF-xF-TX6" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title=".">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uoY-6G-tn7"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuR-HJ-KwA" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <state key="normal" title="=">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btn_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAS-5h-7CU"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="QuR-HJ-KwA" firstAttribute="width" secondItem="foF-oh-5fw" secondAttribute="width" multiplier="1/2" id="IVj-Hr-TXd"/>
+                                                            <constraint firstItem="foF-oh-5fw" firstAttribute="width" secondItem="VgE-uC-hKp" secondAttribute="width" multiplier="1/2" id="auj-1n-Nc6"/>
+                                                            <constraint firstItem="1mF-xF-TX6" firstAttribute="width" secondItem="foF-oh-5fw" secondAttribute="width" multiplier="1/2" id="zds-U7-AGn"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="VgE-uC-hKp" firstAttribute="height" secondItem="3GW-Zh-ceA" secondAttribute="height" id="EGT-lZ-AZd"/>
+                                                    <constraint firstItem="PSF-GZ-kLw" firstAttribute="height" secondItem="3GW-Zh-ceA" secondAttribute="height" id="MsN-on-Nd6"/>
+                                                    <constraint firstItem="NI3-BP-f4q" firstAttribute="height" secondItem="3GW-Zh-ceA" secondAttribute="height" id="YXu-nI-NIv"/>
+                                                    <constraint firstItem="3GW-Zh-ceA" firstAttribute="height" secondItem="Ycf-iY-RsJ" secondAttribute="height" multiplier="0.2" id="cr0-24-hKN"/>
+                                                    <constraint firstItem="P18-XY-tRC" firstAttribute="height" secondItem="3GW-Zh-ceA" secondAttribute="height" id="uT0-l2-FiS"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Ycf-iY-RsJ" firstAttribute="height" secondItem="7zR-KD-was" secondAttribute="height" multiplier="0.78" id="4Hf-pN-48B"/>
+                                            <constraint firstItem="Ycf-iY-RsJ" firstAttribute="leading" secondItem="7zR-KD-was" secondAttribute="leading" constant="20" id="7dr-m0-qm4"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ycf-iY-RsJ" secondAttribute="trailing" constant="20" id="Q1W-5f-6k6"/>
+                                            <constraint firstItem="Ycf-iY-RsJ" firstAttribute="centerY" secondItem="7zR-KD-was" secondAttribute="centerY" id="bS5-gb-wKh"/>
+                                            <constraint firstItem="Ycf-iY-RsJ" firstAttribute="centerX" secondItem="7zR-KD-was" secondAttribute="centerX" id="fjd-Os-Teg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="34V-rH-xrM" secondAttribute="trailing" id="15f-hh-YbG"/>
+                                    <constraint firstItem="34V-rH-xrM" firstAttribute="leading" secondItem="doj-fG-oqE" secondAttribute="leading" id="CA7-Sr-HeL"/>
+                                    <constraint firstItem="34V-rH-xrM" firstAttribute="height" secondItem="doj-fG-oqE" secondAttribute="height" multiplier="0.22" id="cRK-XK-hoW"/>
+                                    <constraint firstItem="34V-rH-xrM" firstAttribute="top" secondItem="doj-fG-oqE" secondAttribute="top" id="v6u-Jd-aQc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="doj-fG-oqE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CQb-eQ-7du"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="doj-fG-oqE" secondAttribute="trailing" id="cGM-p4-Wnx"/>
+                            <constraint firstItem="doj-fG-oqE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uCB-D2-8T3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="doj-fG-oqE" secondAttribute="bottom" id="yZZ-ED-uzl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wFY-Ae-UFB"/>
+                    <connections>
+                        <outlet property="lblCaculator" destination="ZGz-0q-faw" id="aEI-wT-6go"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713.04347826086962" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TnL-AL-zZo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ej-FH-iUv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2b1-kj-zWu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LKg-UM-FgW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9f-aP-zpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
