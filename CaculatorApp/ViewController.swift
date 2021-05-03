@@ -8,37 +8,65 @@
 import UIKit
 
 class ViewController: UIViewController {
-   
+    
     var lastKey : String = "Start"
     var currentOperation = 0
     var lastOperation = 0
-    var saveVal : Float?
+    var saveVal : Double?
+    var equal : Bool?
     @IBOutlet weak var lblCaculator: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
+        
+        
     }
     
     @IBAction func btn_click(_ sender: Any) {
         
         let btnTag = (sender as AnyObject).tag
-        let number = Float(lblCaculator.text!)
+        
+        let str = formatText(lblCaculator.text!)
+        guard str.count < 10  else {
+            lblCaculator.text = ""
+            saveVal = nil
+            return
+        }
+        let number = Double(str)
         
         switch btnTag {
         case 0,1,2,3,4,5,6,7,8,9:
-            print(lastKey)
-            if lastKey != "number" && lastKey != "."{
-                lblCaculator.text = ""
-            }
-            lblCaculator.text = lblCaculator.text! + "\(String(btnTag!))"
-            lastKey = "number"
-            break
-        case 10:
-            guard !(lblCaculator.text?.contains("."))! else {
+            
+            guard str.count < 9 || lastKey != "number" else {
                 return
             }
-            lblCaculator.text = lblCaculator.text! + "."
+            if equal == true {
+                saveVal = nil
+                equal = false
+            }
+            if lastKey != "number" && lastKey != ","{
+                lblCaculator.text = ""
+            }
+            let text = formatText(lblCaculator.text! + "\(String(btnTag!))")
+            
+           toPrintNumber(number: Double(text)!)
+            
+
             lastKey = "number"
+            
+            
+            break
+        case 10:// ,
+            if equal == true {
+                saveVal = nil
+                equal = false
+            }
+            guard !(lblCaculator.text?.contains(","))! else {
+                
+                return
+            }
+            lblCaculator.text = lblCaculator.text! + ","
+            lastKey = ","
             break
         case 11: // =
             
@@ -48,10 +76,11 @@ class ViewController: UIViewController {
             
             caculated(operationType: currentOperation, number: number!, typeOfCaculate: currentOperation)
             lastOperation = 0
-            
+            equal = true
             
             break
         case 12: //+
+            
             guard number != nil else {
                 return
             }
@@ -82,19 +111,29 @@ class ViewController: UIViewController {
             currentOperation = 4
             break
         case 16: // %
+            
             guard number != nil else {
                 return
             }
-           let val = number!/100
-            lblCaculator.text = val.clean
+            let val = number!/100
+            toPrintNumber(number: val)
+            
+            
+            lastKey = "operator"
+            equal = true
             break
         case 17 :// +/-
+            
             guard number != nil else {
                 return
             }
             let val = number!*(-1)
-             lblCaculator.text = val.clean
-        break
+            toPrintNumber(number: val)
+        
+            
+            lastKey = "operator"
+            equal = true
+            break
         default:
             saveVal = nil
             lblCaculator.text = ""
@@ -103,13 +142,46 @@ class ViewController: UIViewController {
         
     }
     
- 
+    func formatText(_ str : String) -> String {
+        if (str.contains(".")){
+            let newString = str.replacingOccurrences(of: ".", with: "", options: .literal, range: nil)
+            if (newString.contains(",")){
+                let newString = newString.replacingOccurrences(of: ",", with: ".", options: .literal, range: nil)
+                return newString
+            }
+            return newString
+            
+        }else
+        if (str.contains(",")){
+            let newString = str.replacingOccurrences(of: ",", with: ".", options: .literal, range: nil)
+            return newString
+        }
+        
+        return str
+    }
     
-    func caculated(operationType : Int , number : Float , typeOfCaculate : Int) {
+    func toPrintNumber(number : Double){
+        let number = NSNumber(value: number)
+        let formater = NumberFormatter()
+        formater.groupingSeparator = "."
+        formater.decimalSeparator = ","
+        formater.numberStyle = .decimal
+        formater.maximumFractionDigits = .max
+        let formattedNumber = formater.string(from: number)!
+        lblCaculator.text = String(formattedNumber)
+        
+    }
+    
+    
+    func caculated(operationType : Int , number : Double , typeOfCaculate : Int) {
+        print(lastKey)
+        if equal == true {
+            equal = false
+        }
         if lastOperation == 0 {
             
             lastOperation = operationType
-           
+            
         }
         if lastKey == "operator" || lastKey == "Start" {
             return
@@ -117,39 +189,38 @@ class ViewController: UIViewController {
         
         
         guard saveVal != nil else {
-            saveVal = Float(lblCaculator.text!)!
+            saveVal = Double(formatText( lblCaculator.text!))!
             lastKey = "operator"
             lastOperation = operationType
             currentOperation = operationType// cho dau =
             return
         }
-       
+        
         switch typeOfCaculate {
         case 1:
             
-            saveVal = saveVal! + number
-            lblCaculator.text = String(saveVal!.clean)
+            saveVal = (saveVal! + number)
+           toPrintNumber(number: Double(saveVal!))
+           
+            
             
             break
             
         case 2:
             
-            saveVal = saveVal! - number
-            lblCaculator.text = String(saveVal! .clean)
-            
+            saveVal = (saveVal! - number)
+            toPrintNumber(number: Double(saveVal!))
             break
         case 3:
             
-            saveVal = saveVal! * number
-            lblCaculator.text = String(saveVal!.clean)
-            
+            saveVal = (saveVal! * number)
+            toPrintNumber(number: Double(saveVal!))
             break
             
         default:
             
-            saveVal = saveVal! / number
-            lblCaculator.text = String(saveVal!.clean)
-         
+            saveVal = (saveVal! / number)
+            toPrintNumber(number: Double(saveVal!))
             break
         }
         lastOperation  = operationType
@@ -163,6 +234,6 @@ class ViewController: UIViewController {
 
 extension Float {
     var clean: String {
-       return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
+        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
     }
 }

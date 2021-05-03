@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="doj-fG-oqE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="775"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34V-rH-xrM">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="170.5"/>
@@ -44,10 +44,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zR-KD-was">
-                                        <rect key="frame" x="0.0" y="170.5" width="414" height="603.5"/>
+                                        <rect key="frame" x="0.0" y="170.5" width="414" height="604.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-iY-RsJ">
-                                                <rect key="frame" x="20" y="66" width="374" height="471"/>
+                                                <rect key="frame" x="20" y="66.5" width="374" height="471.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GW-Zh-ceA">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="94.5"/>
@@ -56,6 +56,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="AC">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -66,6 +67,7 @@
                                                             <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bt-qu-WnZ" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="93.5" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="+/-">
                                                                     <color key="titleColor" systemColor="labelColor"/>
                                                                 </state>
@@ -76,6 +78,7 @@
                                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG0-pN-jno" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="187" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="%">
                                                                     <color key="titleColor" systemColor="labelColor"/>
                                                                 </state>
@@ -86,6 +89,7 @@
                                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxJ-Lf-sI7" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="280.5" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="/">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -108,6 +112,7 @@
                                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-Yv-JiI" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="93.5" height="94"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="7">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -118,6 +123,7 @@
                                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muN-VH-OdQ" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="93.5" y="0.0" width="93.5" height="94"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="8">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -128,6 +134,7 @@
                                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAT-aN-nHv" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="187" y="0.0" width="93.5" height="94"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="9">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -138,6 +145,7 @@
                                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhH-QQ-odi" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
                                                                 <rect key="frame" x="280.5" y="0.0" width="93.5" height="94"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="*">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -154,11 +162,12 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PSF-GZ-kLw">
-                                                        <rect key="frame" x="0.0" y="188.5" width="374" height="94"/>
+                                                        <rect key="frame" x="0.0" y="188.5" width="374" height="94.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAn-uX-RAf" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="4">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -167,8 +176,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shc-yz-yjZ" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="5">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -177,8 +187,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-uW-KBA" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="6">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -187,8 +198,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8h-Lz-QZg" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="-">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -209,11 +221,12 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P18-XY-tRC">
-                                                        <rect key="frame" x="0.0" y="282.5" width="374" height="94.5"/>
+                                                        <rect key="frame" x="0.0" y="283" width="374" height="94"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkW-Hj-1mr" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="1">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -222,8 +235,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEB-F5-64C" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="2">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -232,8 +246,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFi-vV-Xmx" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="3">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -242,8 +257,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-wv-dAN" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="+">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -260,11 +276,12 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-uC-hKp">
-                                                        <rect key="frame" x="0.0" y="377" width="374" height="94"/>
+                                                        <rect key="frame" x="0.0" y="377" width="374" height="94.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foF-oh-5fw" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="94"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="94.5"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="0">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -273,9 +290,10 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mF-xF-TX6" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title=".">
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                                <state key="normal" title=",">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -283,8 +301,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuR-HJ-KwA" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94.5"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="=">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
