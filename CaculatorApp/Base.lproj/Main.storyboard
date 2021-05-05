@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ej-FH-iUv">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CaculatorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="doj-fG-oqE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="775"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="690.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34V-rH-xrM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="170.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-0q-faw">
-                                                <rect key="frame" x="20" y="41.5" width="374" height="129"/>
+                                                <rect key="frame" x="20" y="22.666666666666671" width="335" height="129.33333333333331"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="100"/>
@@ -44,16 +44,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zR-KD-was">
-                                        <rect key="frame" x="0.0" y="170.5" width="414" height="604.5"/>
+                                        <rect key="frame" x="0.0" y="152" width="375" height="538.33333333333337"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-iY-RsJ">
-                                                <rect key="frame" x="20" y="66.5" width="374" height="471.5"/>
+                                                <rect key="frame" x="20" y="59" width="335" height="420"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GW-Zh-ceA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="94.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="84"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9m-BY-Q4D" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="84"/>
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -65,7 +65,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bt-qu-WnZ" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="83.666666666666671" y="0.0" width="84.000000000000014" height="84"/>
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="+/-">
@@ -76,7 +76,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG0-pN-jno" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="167.66666666666666" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="%">
@@ -87,7 +87,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxJ-Lf-sI7" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="251.33333333333329" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="/">
@@ -107,10 +107,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-BP-f4q">
-                                                        <rect key="frame" x="0.0" y="94.5" width="374" height="94"/>
+                                                        <rect key="frame" x="0.0" y="84" width="335" height="84"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-Yv-JiI" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="7">
@@ -121,7 +121,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muN-VH-OdQ" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="83.666666666666671" y="0.0" width="84.000000000000014" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="8">
@@ -132,7 +132,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAT-aN-nHv" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="167.66666666666666" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="9">
@@ -143,7 +143,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhH-QQ-odi" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="251.33333333333329" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="*">
@@ -162,10 +162,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PSF-GZ-kLw">
-                                                        <rect key="frame" x="0.0" y="188.5" width="374" height="94.5"/>
+                                                        <rect key="frame" x="0.0" y="168" width="335" height="84"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAn-uX-RAf" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="4">
@@ -176,7 +176,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shc-yz-yjZ" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="83.666666666666671" y="0.0" width="84.000000000000014" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="5">
@@ -187,7 +187,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-uW-KBA" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="167.66666666666666" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="6">
@@ -198,7 +198,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8h-Lz-QZg" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="251.33333333333329" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="-">
@@ -221,10 +221,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P18-XY-tRC">
-                                                        <rect key="frame" x="0.0" y="283" width="374" height="94"/>
+                                                        <rect key="frame" x="0.0" y="252" width="335" height="84"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkW-Hj-1mr" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="1">
@@ -235,7 +235,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEB-F5-64C" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="93.5" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="83.666666666666671" y="0.0" width="84.000000000000014" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="2">
@@ -246,7 +246,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFi-vV-Xmx" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="167.66666666666666" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="3">
@@ -257,7 +257,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-wv-dAN" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94"/>
+                                                                <rect key="frame" x="251.33333333333329" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="+">
@@ -276,10 +276,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-uC-hKp">
-                                                        <rect key="frame" x="0.0" y="377" width="374" height="94.5"/>
+                                                        <rect key="frame" x="0.0" y="336" width="335" height="84"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foF-oh-5fw" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="94.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="0">
@@ -290,7 +290,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mF-xF-TX6" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="187" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="167.66666666666666" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title=",">
@@ -301,7 +301,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuR-HJ-KwA" customClass="CustomButton" customModule="CaculatorApp" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="93.5" height="94.5"/>
+                                                                <rect key="frame" x="251.33333333333329" y="0.0" width="83.666666666666657" height="84"/>
                                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                                 <state key="normal" title="=">
@@ -371,7 +371,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ej-FH-iUv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2b1-kj-zWu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

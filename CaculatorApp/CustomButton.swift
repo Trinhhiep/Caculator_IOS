@@ -21,6 +21,6 @@ class CustomButton : UIButton{
         self.layer.borderWidth = 10
         self.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.layer.cornerRadius = self.bounds.height/2
-        
+     
     }
 }

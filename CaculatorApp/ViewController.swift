@@ -6,234 +6,215 @@
 //
 
 import UIKit
-
+import Foundation
 class ViewController: UIViewController {
     
     var lastKey : String = "Start"
-    var currentOperation = 0
-    var lastOperation = 0
-    var saveVal : Double?
     var equal : Bool?
+    var expressionString : String = ""
+    
     @IBOutlet weak var lblCaculator: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
     }
-    
     @IBAction func btn_click(_ sender: Any) {
-        
+        print(expressionString)
+        print(lastKey)
         let btnTag = (sender as AnyObject).tag
-        
-        let str = formatText(lblCaculator.text!)
-        guard str.count < 10  else {
-            lblCaculator.text = ""
-            saveVal = nil
-            return
-        }
-        let number = Double(str)
+        let str = (lblCaculator.text!).validate
         
         switch btnTag {
         case 0,1,2,3,4,5,6,7,8,9:
-            
             guard str.count < 9 || lastKey != "number" else {
                 return
             }
             if equal == true {
-                saveVal = nil
                 equal = false
             }
-            if lastKey != "number" && lastKey != ","{
+            if (lastKey != "number" && lastKey != "," ){
                 lblCaculator.text = ""
             }
-            let text = formatText(lblCaculator.text! + "\(String(btnTag!))")
             
-           toPrintNumber(number: Double(text)!)
-            
-
+            let text = (lblCaculator.text! + "\(String(btnTag!))").validate
+            expressionString = expressionString + String(btnTag!)
+            lblCaculator.text = Double(text)?.formatDoubleType
             lastKey = "number"
-            
-            
             break
         case 10:// ,
+            guard str.count < 9 else{
+                return
+            }
             if equal == true {
-                saveVal = nil
+                
                 equal = false
             }
             guard !(lblCaculator.text?.contains(","))! else {
-                
                 return
             }
             lblCaculator.text = lblCaculator.text! + ","
+            expressionString = expressionString + "."
             lastKey = ","
             break
         case 11: // =
             
-            guard saveVal != nil && currentOperation != 0 && number != nil else{
+            if lastKey == "number"{
+                guard let result  = calculate(expressionString) else {
+                    return
+                }
+                lblCaculator.text = result.formatDoubleType
+                expressionString = String(result)
+                equal = true
+            }
+            else{
                 return
             }
             
-            caculated(operationType: currentOperation, number: number!, typeOfCaculate: currentOperation)
-            lastOperation = 0
-            equal = true
+            
             
             break
         case 12: //+
+            config(1)
             
-            guard number != nil else {
-                return
-            }
-            caculated(operationType: 1,number: number!, typeOfCaculate: lastOperation)
-            currentOperation = 1
             break
-            
         case 13: //-
-            guard number != nil else {
-                return
-            }
-            caculated(operationType: 2,number: number!, typeOfCaculate: lastOperation)
-            currentOperation = 2
+            config(2)
+            
+            
             
             break
         case 14: //*
-            guard number != nil else {
-                return
-            }
-            caculated(operationType: 3,number: number!, typeOfCaculate: lastOperation)
-            currentOperation = 3
+            config(3)
+            
+            
+            
             break
         case 15: // /
-            guard number != nil else {
-                return
-            }
-            caculated(operationType: 4,number: number!, typeOfCaculate: lastOperation)
-            currentOperation = 4
+            config(4)
+            
+            
+            
             break
         case 16: // %
-            
-            guard number != nil else {
+            guard let number1 = Double(lblCaculator.text!.validate) else {
                 return
             }
-            let val = number!/100
-            toPrintNumber(number: val)
-            
-            
-            lastKey = "operator"
+            let val = number1/100
+            lblCaculator.text =  val.formatDoubleType
+            expressionString = String(val)
+            lastKey = ""
             equal = true
             break
         case 17 :// +/-
-            
-            guard number != nil else {
+            guard let number1 = Double(lblCaculator.text!.validate) else {
                 return
             }
-            let val = number!*(-1)
-            toPrintNumber(number: val)
-        
-            
-            lastKey = "operator"
+            let val = number1*(-1)
+            lblCaculator.text =  val.formatDoubleType
+            expressionString = String(val)
+            lastKey = ""
             equal = true
             break
         default:
-            saveVal = nil
+            expressionString = ""
             lblCaculator.text = ""
         }
-        
-        
-    }
-    
-    func formatText(_ str : String) -> String {
-        if (str.contains(".")){
-            let newString = str.replacingOccurrences(of: ".", with: "", options: .literal, range: nil)
-            if (newString.contains(",")){
-                let newString = newString.replacingOccurrences(of: ",", with: ".", options: .literal, range: nil)
-                return newString
-            }
-            return newString
-            
-        }else
-        if (str.contains(",")){
-            let newString = str.replacingOccurrences(of: ",", with: ".", options: .literal, range: nil)
-            return newString
-        }
-        
-        return str
-    }
-    
-    func toPrintNumber(number : Double){
-        let number = NSNumber(value: number)
-        let formater = NumberFormatter()
-        formater.groupingSeparator = "."
-        formater.decimalSeparator = ","
-        formater.numberStyle = .decimal
-        formater.maximumFractionDigits = .max
-        let formattedNumber = formater.string(from: number)!
-        lblCaculator.text = String(formattedNumber)
-        
     }
     
     
-    func caculated(operationType : Int , number : Double , typeOfCaculate : Int) {
-        print(lastKey)
-        if equal == true {
-            equal = false
-        }
-        if lastOperation == 0 {
-            
-            lastOperation = operationType
-            
-        }
-        if lastKey == "operator" || lastKey == "Start" {
+    
+    
+    func config( _ operationType : Int) {
+        guard lastKey != "operator" && lastKey != "Start" else{
             return
         }
-        
-        
-        guard saveVal != nil else {
-            saveVal = Double(formatText( lblCaculator.text!))!
-            lastKey = "operator"
-            lastOperation = operationType
-            currentOperation = operationType// cho dau =
-            return
-        }
-        
-        switch typeOfCaculate {
+        lastKey = "operator"
+        switch operationType {
         case 1:
-            
-            saveVal = (saveVal! + number)
-           toPrintNumber(number: Double(saveVal!))
-           
-            
-            
+            guard let result =  calculate(expressionString)  else {
+                return
+            }
+            lblCaculator.text = result.formatDoubleType
+            expressionString = String(result) + "+"
             break
-            
         case 2:
-            
-            saveVal = (saveVal! - number)
-            toPrintNumber(number: Double(saveVal!))
+            guard let result =  calculate(expressionString)  else {
+                return
+            }
+            lblCaculator.text = result.formatDoubleType
+            expressionString = String(result) + "-"
             break
         case 3:
             
-            saveVal = (saveVal! * number)
-            toPrintNumber(number: Double(saveVal!))
+            expressionString = expressionString + "*"
             break
-            
         default:
-            
-            saveVal = (saveVal! / number)
-            toPrintNumber(number: Double(saveVal!))
+            expressionString = expressionString + "/"
             break
+            
         }
-        lastOperation  = operationType
-        currentOperation = operationType
         
-        lastKey = "operator"
+        
         
     }
     
+    func calculate(_ equation: String ) -> Double? {
+        
+        let expr = NSExpression(format: equation)
+        
+        guard let result = (expr.expressionValue(with: nil, context: nil) as? Double)  else {
+            return nil
+        }
+        return result
+    }
 }
 
-extension Float {
-    var clean: String {
-        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
+extension Double {
+    var formatG: String {
+        return  String(format: "%g", self)
+    }
+    var formatDoubleType : String {
+        let num = NSNumber(value: self)
+        let numCount = String(num.intValue).count
+        if numCount >= 10{
+            return  self.formatG
+        }
+        if self < 1 && abs(num.floatValue) <= 0.0000001{
+            return  self.formatG
+        }
+        let formattedNumber = num.formattedWithSeparator
+        return formattedNumber
+    }
+}
+
+extension Formatter {
+    static let withSeparator: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.decimalSeparator = ","
+        formatter.maximumFractionDigits = 8
+        return formatter
+    }()
+}
+extension NSNumber {
+    var formattedWithSeparator: String { Formatter.withSeparator.string(for: self) ?? "" }
+}
+extension String{
+    var validate : String{
+        if self.contains("."){
+            let newString = self.replacingOccurrences(of: ".", with: "", options: .literal, range: nil)
+            if newString.contains(","){
+                let newString1 = self.replacingOccurrences(of: ",", with: ".", options: .literal, range: nil)
+                return newString1
+            }
+            return newString
+        }
+        if self.contains(","){
+            let newString1 = self.replacingOccurrences(of: ",", with: ".", options: .literal, range: nil)
+            return newString1
+        }
+        return self
     }
 }
