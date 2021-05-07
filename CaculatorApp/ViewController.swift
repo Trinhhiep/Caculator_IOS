@@ -11,17 +11,16 @@ class ViewController: UIViewController {
     
     var lastKey : String = "Start"
     var equal : Bool?
-    var expressionString : String = ""
+    var expressionString : String = "(1.0)*"
     
     @IBOutlet weak var lblCaculator: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
     }
     @IBAction func btn_click(_ sender: Any) {
-        print(expressionString)
-        print(lastKey)
+      
         let btnTag = (sender as AnyObject).tag
         let str = (lblCaculator.text!).validate
         
@@ -37,9 +36,9 @@ class ViewController: UIViewController {
                 lblCaculator.text = ""
             }
             
-            let text = (lblCaculator.text! + "\(String(btnTag!))").validate
+            let text = (lblCaculator.text! + "\(String(btnTag!))")
             expressionString = expressionString + String(btnTag!)
-            lblCaculator.text = Double(text)?.formatDoubleType
+            lblCaculator.text = text
             lastKey = "number"
             break
         case 10:// ,
@@ -63,15 +62,19 @@ class ViewController: UIViewController {
                 guard let result  = calculate(expressionString) else {
                     return
                 }
+                if result == Double.infinity{
+                    lblCaculator.text = "Lỗi"
+                    expressionString = "(1.0)*"
+                    lastKey = "Start"
+                    print("inf")
+                }
+                else{
                 lblCaculator.text = result.formatDoubleType
                 expressionString = String(result)
                 equal = true
+                    print("non inf")
+                }
             }
-            else{
-                return
-            }
-            
-            
             
             break
         case 12: //+
@@ -117,7 +120,8 @@ class ViewController: UIViewController {
             equal = true
             break
         default:
-            expressionString = ""
+            expressionString = "(1.0)*"
+            lastKey = "Start"
             lblCaculator.text = ""
         }
     }
@@ -135,6 +139,7 @@ class ViewController: UIViewController {
             guard let result =  calculate(expressionString)  else {
                 return
             }
+         
             lblCaculator.text = result.formatDoubleType
             expressionString = String(result) + "+"
             break
@@ -162,8 +167,8 @@ class ViewController: UIViewController {
     func calculate(_ equation: String ) -> Double? {
         
         let expr = NSExpression(format: equation)
-        
-        guard let result = (expr.expressionValue(with: nil, context: nil) as? Double)  else {
+       
+        guard  let result = expr.expressionValue(with: nil, context: nil) as? Double else {
             return nil
         }
         return result
